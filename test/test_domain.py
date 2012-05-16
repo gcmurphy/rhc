@@ -4,7 +4,7 @@ import os, sys
 sys.path.insert(0, os.path.join("..", "src"))
 
 from nose.tools import *
-from openshift.client.api import domain
+from rhc.client.api import domain
 
 def test_create():
     

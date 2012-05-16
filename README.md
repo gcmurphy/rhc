@@ -1,5 +1,5 @@
 
-Python - Openshift Client Rest API
+pyrhc: Openshift Client Rest API
 ==================================
 
 About
@@ -21,7 +21,7 @@ also trying out "no classes" using python
 Usage
 -----
     
-    from openshift.client.api import user 
+    from rhc.client.api import user 
 
     info = user.info( **{
             "rhlogin": Your-Login, 
@@ -38,7 +38,7 @@ Installing
 
 At the moment you should be able to install as follows: 
     
-    pip install --upgrade git+git://github.com/gcmurphy/openshift
+    pip install --upgrade git+git://github.com/gcmurphy/pyrhc
 
 I'll get things up on readthedocs.org when I get closer to being 
 finished..

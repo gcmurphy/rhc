@@ -3,7 +3,7 @@ from getpass import getpass
 sys.path.insert(0, os.path.join("..", "src"))
 
 from nose.tools import *
-from openshift.client.api import user
+from rhc.client.api import user
 
 def test_userinfo():
     
