@@ -1,5 +1,5 @@
-from openshift.client.api.broker import broker, OPENSHIFT_BROKER_URL
-from openshift.client.api.command import command
+import broker
+import command
 
 _path = "cartridge"
 
@@ -43,9 +43,9 @@ def status(*kw):
     
 def _run(action, **kw):
     
-    url = "%s/%s" % (kw.get("broker", OPENSHIFT_BROKER_URL), _path) 
+    url = "%s/%s" % (kw.get("broker", broker.OPENSHIFT_BROKER_URL), _path) 
     kw.update({"action": action})
-    cmd = command({
+    cmd = command.command({
             "cartridge": { "class": "required", "type": "app-cartridge" },
             "debug": {"class": "optional", "type": "flag"}, 
             "password": {"class": "required", "type": "string"}, 
@@ -54,4 +54,4 @@ def _run(action, **kw):
             "rhlogin": {"class": "required", "type": "string"
             }}, kw)
 
-    return broker(url, cmd)
+    return broker.broker(url, cmd)

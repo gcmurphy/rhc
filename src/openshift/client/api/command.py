@@ -1,5 +1,5 @@
 
-from validation import validate
+import validation
 
 def command(specs, args):
 
@@ -12,7 +12,7 @@ def command(specs, args):
 
         if args.has_key(key):
             value = args.get(key)
-            validate(key, specs[key]['type'], value)
+            validation.validate(key, specs[key]['type'], value)
             cmd[key] = value
         
     return cmd

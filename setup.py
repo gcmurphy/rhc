@@ -14,6 +14,7 @@ setup(
     install_requires=[
         "requests", 
         "simplejson",
+        "bunch",
         "nose"
     ], 
 )

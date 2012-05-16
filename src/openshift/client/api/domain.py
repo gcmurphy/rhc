@@ -1,11 +1,11 @@
-from openshift.client.api.broker import broker, OPENSHIFT_BROKER_URL
-from openshift.client.api.command import command
+import broker
+import command
 
 _path = "domain"
 def create(**kw):
     
-    url = "%s/%s" % (kw.get("broker", OPENSHIFT_BROKER_URL), _path) 
-    cmd = command({
+    url = "%s/%s" % (kw.get("broker", broker.OPENSHIFT_BROKER_URL), _path) 
+    cmd = command.command({
         "alter": {"class": "optional", "type": "flag"}, 
         "debug": {"class": "optional", "type": "flag"}, 
         "ssh":   {"class": "required", "type": "string"}, 
@@ -13,4 +13,4 @@ def create(**kw):
         "namespace": {"class": "required", "type": "string"}, 
         "rhlogin": {"class": "required", "type": "string"}}, kw)
 
-    return broker(url, cmd)
+    return broker.broker(url, cmd)

@@ -18,7 +18,8 @@ Status
 Still very rough around the edges. Was 
 also trying out "no classes" using python
 
-Usage: 
+Usage
+-----
     
     from openshift.client.api import user 
 
@@ -32,6 +33,13 @@ Usage:
     for app in info.data.app_info:
         print str(app)
 
+Installing
+----------
 
+At the moment you should be able to install as follows: 
+    
+    pip install --upgrade git+git://github.com/gcmurphy/openshift
 
+I'll get things up on readthedocs.org when I get closer to being 
+finished..
 
