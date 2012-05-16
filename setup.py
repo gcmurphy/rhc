@@ -9,7 +9,7 @@ setup(
     url='https://github.com/gcmurphy/openshift',
     license="PSF",
     description='Create, control and configure OpenShift applications using Python', 
-    long_description=open('README.txt').read(),
+    long_description=open('README.md').read(),
     install_requires=[
         "requests", 
         "simplejson",
