@@ -1,4 +1,3 @@
-
 pyrhc
 ==================================
 Python bindings to the  Openshift Client Rest API 
