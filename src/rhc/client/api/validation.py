@@ -22,19 +22,19 @@ def validate(name, expected, value):
         validate_flag(value, name)
 
     elif expected == "app-action": 
-        validate_is_one_of(name, expected, application.actions)
+        validate_is_one_of(name, value, application.actions)
 
     elif expected == "app-cartridge":
-        validate_is_one_of(name, expected, application.cartridges)
+        validate_is_one_of(name, value, application.cartridges)
 
     elif expected == "embed-action": 
-        validate_is_one_of(name, expected, cartridge.actions)
+        validate_is_one_of(name, value, cartridge.actions)
 
     elif expected == "embed-cartridge":
-        validate_is_one_of(name, expected, cartridge.cartridges)
+        validate_is_one_of(name, value, cartridge.cartridges)
         
     elif expected == "key-type": 
-        validate_is_one_of(name, expected, ssh.key_types)
+        validate_is_one_of(name, value, ssh.key_types)
 
     else:
         pass
