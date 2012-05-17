@@ -55,9 +55,9 @@ Create a new application:
 
 List available embedded cartridges: 
     
-    from rhc.client.api import cartridges
+    from rhc.client.api import cartridge
 
-    cartlist = cartridges.list()
+    cartlist = cartridge.list()
     for cart in cartlist.data.carts: 
         print cart
         
