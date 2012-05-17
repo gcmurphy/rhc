@@ -2,7 +2,6 @@
 from bunch import bunchify
 import simplejson as json 
 import requests
-import validation
 
 OPENSHIFT_BROKER_URL = "https://openshift.redhat.com/broker"
 
