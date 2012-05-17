@@ -1,10 +1,8 @@
 import broker
 import command
 
-_cartlist_url="%s/%s" % (broker.OPENSHIFT_BROKER_URL), "cartlist")
-
-def list(url=_cartlist_url):
-    return broker(url, { "cart_type": "embedded" })
+def list(url="https://openshift.redhat.com/broker/cartlist"):
+    return broker.broker(url, { "cart_type": "embedded" })
 
 _path = "embed_cartridge"
 
