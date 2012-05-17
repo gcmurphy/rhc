@@ -1,6 +1,7 @@
 
-pyrhc: Openshift Client Rest API
+pyrhc
 ==================================
+Python bindings to the  Openshift Client Rest API 
 
 About
 -----
