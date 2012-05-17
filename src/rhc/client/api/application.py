@@ -1,6 +1,11 @@
 import broker
 import command
 
+_cartlist_url="%s/%s" % (broker.OPENSHIFT_BROKER_URL), "cartlist")
+
+def list(url=_cartlist_url):
+    return broker(url, { "cart_type": "standalone" })
+
 _path = "cartridge"
 
 actions = [
@@ -12,6 +17,11 @@ actions = [
     "status"
 ]
 
+# dynamic version
+cartridges = list().data.carts
+
+"""
+# static version
 cartridges = [ 
     "nodejs-0.6", 
     "jbossas-7", 
@@ -22,24 +32,25 @@ cartridges = [
     "php-5.3", 
     "perl-5.10"
 ]
+"""
 
 def create(**kw):
-    _run("configure", **kw)
+    return _run("configure", **kw)
     
 def delete(**kw):
-    _run("deconfigure", **kw)
+    return _run("deconfigure", **kw)
 
 def start(**kw):
-    _run("start", **kw)
+    return _run("start", **kw)
 
 def stop(**kw):
-    _run("stop", **kw)
+    return _run("stop", **kw)
 
 def restart(**kw):
-    _run("restart", **kw)
+    return _run("restart", **kw)
 
 def status(*kw): 
-    _run("status", **kw)
+    return _run("status", **kw)
     
 def _run(action, **kw):
     

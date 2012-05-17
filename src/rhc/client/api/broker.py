@@ -9,7 +9,7 @@ OPENSHIFT_BROKER_URL = "https://openshift.redhat.com/broker"
 def broker(url, cmd):
     
     postdata = {}
-    if cmd['password']: 
+    if cmd.has_key('password'): 
         postdata['password'] = cmd['password']
         del cmd['password']
 
@@ -19,7 +19,6 @@ def broker(url, cmd):
     # Allow 400 status code as will most likely get message 
     # back from OpenShift API that will make more sense than 
     # a HTTP error
-
     if rsp.status_code != 200 and rsp.status_code != 400:
         rsp.raise_for_status()
 
