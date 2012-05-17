@@ -11,10 +11,9 @@ actions = [
     "deconfigure"
 ]
 
-# dynamic version
-cartridges = list().data.carts
+# dynamic version (too slow)
+# cartridges = list().data.carts
 
-"""
 # static version
 cartridges = [ 
     "mongodb-2.0", 
@@ -28,7 +27,6 @@ cartridges = [
     "rockmongo-1.1", 
     "jenkins-client-1.4"
 ]
-"""
 
 def configure(**kw):
     return _run("configure", **kw)

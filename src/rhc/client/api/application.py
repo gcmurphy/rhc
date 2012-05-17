@@ -17,9 +17,9 @@ actions = [
 ]
 
 # dynamic version
-cartridges = list().data.carts
+#cartridges = list().data.carts
 
-"""
+
 # static version
 cartridges = [ 
     "nodejs-0.6", 
@@ -31,7 +31,7 @@ cartridges = [
     "php-5.3", 
     "perl-5.10"
 ]
-"""
+
 
 def create(**kw):
     return _run("configure", **kw)
