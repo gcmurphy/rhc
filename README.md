@@ -67,7 +67,7 @@ Installing
 As a temporary measure you install this via pip. I'll register it 
 as a proper Python package at a later date. 
     
-    pip install --upgrade git+git://github.com/gcmurphy/pyrhc
+    pip install --upgrade git+git://github.com/gcmurphy/rhc
 
 
 
